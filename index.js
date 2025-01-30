@@ -1,8 +1,19 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+app.use(express.json()); 
 
-app.listen(3000)
+app.get("/", (req, res) => {
+    const nome = req.query.nome; 
+    
+    if (nome) {
+        res.send(`Olá, ${nome}! Seja bem-vindo! 👋`);
+    } else {
+        res.send("Por favor, informe seu nome Ex: localhost:3000/?nome=Márcio");
+    }
+});
+
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
