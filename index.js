@@ -7,7 +7,7 @@ const port = 3000
 connectDatabase()
 
 app.use(express.json())
-app.use("/user", userRoute)
+app.use("/", userRoute)
 
 app.listen(port, () => console.log(`Server running in http://localhost:${port}`))
 
