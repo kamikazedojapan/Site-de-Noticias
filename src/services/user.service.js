@@ -10,11 +10,14 @@ const updateService = (id, name, username, email, avatar, background) =>
   User.findOneAndUpdate(
     { _id: id },
     { name, username, email, avatar, background }
-  ); //
+  );
+
+  const deleteService = (id) => User.findByIdAndDelete(id);
   
 module.exports = {
     createService,
     findAllService,
     findByIdService,
-    updateService
+    updateService,
+    deleteService
 }
