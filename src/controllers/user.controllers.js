@@ -1,4 +1,4 @@
-const userService = require('../services/user.service')
+import userService from '../services/user.service.js';
 
 const create = async (req, res) => {
     try {
@@ -89,4 +89,5 @@ const deleteUser = async (req, res) => {
         res.status(500).send({ message: err.message})
     }
 };
-module.exports = {create, findAll, findById, update, deleteUser}
+
+export default {create, findAll, findById, update, deleteUser}
