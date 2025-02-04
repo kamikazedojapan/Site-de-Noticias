@@ -1,5 +1,5 @@
 import express from "express";
-import connectDatabase from "./src/database/db.js";
+import connectDatabase from "./src/database/database.js";
 import userRoute from './src/routes/user.route.js'; 
 
 const port = 3000
