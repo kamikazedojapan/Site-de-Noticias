@@ -1,8 +1,8 @@
-import express from 'express'
+import { Router } from 'express'
 import userController from '../controllers/user.controllers.js'
 import { validId, validUser } from "../middlewares/global.middlewares.js"
 
-const router = express.Router()
+const router = Router()
 
 router.post('/create', userController.create) 
 router.get('/users', userController.findAll) 
