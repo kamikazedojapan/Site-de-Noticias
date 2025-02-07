@@ -2,8 +2,7 @@ import userService from '../services/user.service.js';
 
 const create = async (req, res) => {
     try {
-        const {name, username, email, password, avatar, background} = 
-        req.body;
+        const {name, username, email, password, avatar, background} = req.body;
         
         if(!name || !username || !email || !password || !avatar || !background) {
             res.status(400).send({ message:"Information not filled in the input field" })
