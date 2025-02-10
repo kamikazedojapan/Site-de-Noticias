@@ -24,6 +24,23 @@ const create = async (req, res) => {
 
 const findAll = async (req, res) => {
     try {
+        const auth = req.headers.authorization;
+        if (!auth) {
+            res.send(401)
+        }
+
+        const parts = auth.split(" ")
+
+        const [schema, token] = parts
+
+        if (parts.length !== 2) {
+            return res.send(401)
+        }
+
+        if(schema !== "Bearer") {
+            return res.send(401)
+        }
+        
         const news = await findAllService();
         
         if (news.length === 0) {
