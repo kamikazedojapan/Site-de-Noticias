@@ -12,7 +12,7 @@ const create = async (req, res) => {
             title,
             text,
             banner,
-            user: { _id: "67a289fa91ab67519b0e264f" }
+            user: req.userId
         });
 
         res.status(201).send({ message: "News created successfully" });
@@ -24,23 +24,6 @@ const create = async (req, res) => {
 
 const findAll = async (req, res) => {
     try {
-        const auth = req.headers.authorization;
-        if (!auth) {
-            res.send(401)
-        }
-
-        const parts = auth.split(" ")
-
-        const [schema, token] = parts
-
-        if (parts.length !== 2) {
-            return res.send(401)
-        }
-
-        if(schema !== "Bearer") {
-            return res.send(401)
-        }
-        
         const news = await findAllService();
         
         if (news.length === 0) {
