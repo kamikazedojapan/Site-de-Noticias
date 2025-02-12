@@ -1,6 +1,6 @@
-import {createService, findAllService, countNews, topNewsService, findByIdService, searchByTitleService} from "../services/news.service.js"
+import {createService, findAllService, countNews, topNewsService, findByIdService, searchByTitleService, searchByUserService} from "../services/news.service.js"
 
-const create = async (req, res) => {
+export const create = async (req, res) => {
     try {
         const { title, text, banner } = req.body;
 
@@ -22,7 +22,7 @@ const create = async (req, res) => {
     }
 };
 
-const findAll = async (req, res) => {
+export const findAll = async (req, res) => {
     try {
         let {limit = 5, offset = 0} = req.query;
         
@@ -71,7 +71,7 @@ const findAll = async (req, res) => {
     }
 };
 
-const topNews = async (req, res) => {
+export const topNews = async (req, res) => {
     try {
         const news = await topNewsService();
     
@@ -97,7 +97,7 @@ const topNews = async (req, res) => {
     }
 }
 
-const findById = async (req, res) => {
+export const findById = async (req, res) => {
     try {
         const { id } = req.params
         
@@ -121,7 +121,7 @@ const findById = async (req, res) => {
     }
 }
 
-const searchByTitle = async(req, res) => {
+export const searchByTitle = async(req, res) => {
     try {
         const {title} = req.query;
 
@@ -150,4 +150,25 @@ const searchByTitle = async(req, res) => {
 
 }
 
-export { create, findAll, topNews , findById, searchByTitle }
+export const searchByUser = async(req, res) => {
+    try {
+        const id = req.userId
+        const news = await searchByUserService(id)
+
+        return res.send({
+            results: news.map((item) => ({
+                id: item._id,
+                title: item.title,
+                text: item.text,
+                banner: item.banner,
+                likes: item.likes,
+                comments: item.comments,
+                name: item.user.name,
+                username: item.user.username,
+                userAvatar: item.user.avatar
+            })),
+        })
+    } catch (err) {
+        return res.status(500).send({ message: err.message });
+    }
+}
