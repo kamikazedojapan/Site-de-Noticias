@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyled = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
@@ -12,3 +15,4 @@ body {
   height: 100vw;
   background-color: #f5f5f5;
 }
+`
