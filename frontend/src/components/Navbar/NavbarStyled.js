@@ -1,4 +1,6 @@
-nav {
+import styled from 'styled-components'
+
+export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,42 +11,40 @@ nav {
     background-color: #110c4a;
     z-index: 1;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-}
+`;
 
-img {
+export const Logo = styled.img`
     width: 10rem;
     height: 3.5 rem;
     object-fit: cover;
     cursor: pointer;
-}
+`;
 
-div.input-search {
+export const Search = styled.div`
     position: relative;
     width: 200px;
     display: flex;
     align-items: center;
-}
+    svg {
+        position: absolute;
+        top: 1;
+        right: 0.2rem;
+        z-index: 10;
+        border: none;
+        border-radius: 0.3rem;
+    }
+    input {
+        outline: none;
+        font-size: 1rem;
+        padding: 0.2rem;
+        background-color: #f5f5f5;
+        border: none;
+        width: 100%;
+        border-radius: 0.3rem;
+    }
+`;
 
-svg.bi-search {
-    position: absolute;
-    top: 1;
-    right: 0.2rem;
-    z-index: 10;
-    border: none;
-    border-radius: 0.3rem;
-}
-
-div.input-search input {
-    outline: none;
-    font-size: 1rem;
-    padding: 0.2rem;
-    background-color: #f5f5f5;
-    border: none;
-    width: 100%;
-    border-radius: 0.3rem;
-}
-
-button {
+export const Button = styled.button`
     margin-left: 2rem;
     background-color: #fe2c55;
     border: none;
@@ -59,7 +59,8 @@ button {
     font-weight: 500;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-}
-button:hover {
-    background-color: #c40b30;
-}
+
+    &:hover {
+        background-color: #c40b30;
+    }
+`;
