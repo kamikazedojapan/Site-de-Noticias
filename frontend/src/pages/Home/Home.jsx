@@ -3,7 +3,7 @@ import { Navbar } from "../../components/Navbar/Navbar.jsx";
 // import { news } from "../../Datas.js"
 import { getAllPosts } from "../../services/postsServices.js";
 import { HomeBody } from "./HomeStyled.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -11,8 +11,13 @@ export default function Home() {
   async function findAllPosts() {
     const response = await getAllPosts();
     setNews(response.data.results);
-  }
-  findAllPosts();
+  } 
+
+  useEffect(() => {
+    findAllPosts();
+  }, []);
+
+  // findAllPosts();
   return (
     <>
       <Navbar />

@@ -1,4 +1,4 @@
-import logo from '../Images/logo.png'
+import logo from '../../Images/logo.png'
 // import "./Navbar.css"
 import { Button, Nav, Search, Logo } from './NavbarStyled';
 

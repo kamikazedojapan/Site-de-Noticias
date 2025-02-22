@@ -14,10 +14,15 @@ export const CardContainer = styled.section`
 `;
 export const CardBody = styled.article`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  div {
+    display: flex;
+    align-items: center;
+  }
   img {
-    width: 30%;
+    width: 50%;
     object-fit: cover;
     object-position: center;
   }

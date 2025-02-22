@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { CardBody, CardContainer, CardFooter } from "./CardStyled";
+import { TextLimit } from "../TextLimit/textLimit";
 
 export function Card(props) {
   return (
@@ -7,9 +8,10 @@ export function Card(props) {
       <CardBody>
         <div>
           <h2>{props.title}</h2>
-          <p>{props.text}</p>
+          <img src={props.banner} alt="Imagem" />
         </div>
-        <img src={props.image} alt="Imagem" />
+          
+          <TextLimit text={props.text} limit={200}/>
       </CardBody>
 
       <CardFooter>
@@ -54,7 +56,7 @@ export function Card(props) {
 Card.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  banner: PropTypes.string.isRequired,
   likes: PropTypes.number.isRequired,
   comments: PropTypes.number.isRequired,
 };
