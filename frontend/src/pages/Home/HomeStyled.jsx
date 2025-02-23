@@ -5,6 +5,12 @@ export const HomeBody = styled.section`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     gap: 1rem;
-    width: 90%;
+    width: 80%;
     margin: 1rem auto;
-`
+`;
+
+export const HomeHeader = styled.section`
+    width: 80%;
+    display: flex;
+    margin: 1rem auto;
+`;
