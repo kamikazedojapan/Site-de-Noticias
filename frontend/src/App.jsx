@@ -1,14 +1,7 @@
-import './App.css'
-import { GlobalStyled } from './GlobalStyled.jsx'
-import Home from './pages/Home/Home.jsx'
+import { Outlet } from 'react-router'
 
 function App() {  
-  return (
-    <>
-    <GlobalStyled/>
-    <Home />
-    </>
-  )
+  return <Outlet/>
 }
 
 export default App

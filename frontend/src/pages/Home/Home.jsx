@@ -1,6 +1,4 @@
 import { Card } from "../../components/Cards/Card.jsx";
-import { Navbar } from "../../components/Navbar/Navbar.jsx";
-// import { post } from "../../Datas.js"
 import { getAllPosts, getTopPost } from "../../services/postsServices.js";
 import { HomeBody, HomeHeader } from "./HomeStyled.jsx";
 import { useState, useEffect } from "react";
@@ -24,7 +22,6 @@ export default function Home() {
   // findAllPosts();
   return (
     <>
-      <Navbar />
       <HomeHeader>
         <Card 
             top={true}

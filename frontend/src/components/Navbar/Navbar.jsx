@@ -1,5 +1,5 @@
+import { Outlet } from 'react-router';
 import logo from '../../Images/logo.png'
-// import "./Navbar.css"
 import { Button, Nav, Search, Logo } from './NavbarStyled';
 
 
@@ -13,11 +13,11 @@ export function Navbar() {
             </svg>
             <input type="text" placeholder='Pesquise por um título'/>
         </Search>
-
         <Logo src={logo} alt="News Flash" />
         
         <Button>Entrar</Button>
       </Nav>
+      <Outlet/>
     </>
   );
 }
