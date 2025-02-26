@@ -50,10 +50,17 @@ export const CardHeader = styled.article`
   p {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
+  
 `;
 
 export const CardFooter = styled.article`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  section {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
 `;

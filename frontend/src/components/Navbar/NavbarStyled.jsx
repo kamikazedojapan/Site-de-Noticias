@@ -25,13 +25,14 @@ export const Search = styled.div`
     width: 200px;
     display: flex;
     align-items: center;
-    svg {
+    button {
         position: absolute;
         top: 1;
         right: 0.2rem;
         z-index: 10;
         border: none;
         border-radius: 0.3rem;
+        
     }
     input {
         outline: none;

@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <HomeHeader>
         <Card 
-            top={true}
+            top="true"
             title={topPosts.title}
             text={topPosts.text}
             banner={topPosts.banner}
