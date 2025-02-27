@@ -35,6 +35,7 @@ export const Search = styled.div`
         
     }
     input {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         outline: none;
         font-size: 1rem;
         padding: 0.2rem;
