@@ -46,27 +46,6 @@ export const Search = styled.div`
     }
 `;
 
-export const Button = styled.button`
-    margin-left: 2rem;
-    background-color: #fe2c55;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    padding: 0.4rem 1rem;
-    color: #fff;
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
-    border-radius: 0.3rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-
-    &:hover {
-        background-color: #c40b30;
-    }
-`;
-
 export const ErrorSpan = styled.span`
     background-color: #ffaeae;
     color: #9e0000;

@@ -1,15 +1,18 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import logo from "../../Images/logo.png";
-import { Button, Nav, Search, Logo, ErrorSpan } from "./NavbarStyled";
+import { Nav, Search, Logo, ErrorSpan } from "./NavbarStyled";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "../Button/Button";
 
 const searchSchema = z.object({
   title: z
     .string()
     .nonempty({ message: "O campo de pesquisa está vazio" })
-    .refine((value) => !/^\s*$/.test(value), {message: "A pesquisa não pode conter somente espaço"}),
+    .refine((value) => !/^\s*$/.test(value), {
+      message: "A pesquisa não pode conter somente espaço",
+    }),
 });
 
 export function Navbar() {
@@ -29,7 +32,7 @@ export function Navbar() {
   }
 
   function goAuth() {
-      navigate("/auth")
+    navigate("/auth");
   }
 
   return (
@@ -61,7 +64,11 @@ export function Navbar() {
           <Logo src={logo} alt="News Flash" />
         </Link>
 
-        <Button onClick={goAuth}>Entrar</Button>
+        <Link to="/auth">
+          <Button onClick={goAuth} type="Button" text="Entrar">
+            Entrar
+          </Button>
+        </Link>
       </Nav>
       {errors.title && <ErrorSpan>{errors.title.message}</ErrorSpan>}
       <Outlet />
