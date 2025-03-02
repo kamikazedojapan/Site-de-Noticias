@@ -47,11 +47,11 @@ export const Search = styled.div`
 `;
 
 export const ErrorSpan = styled.span`
-    background-color: #ffaeae;
+    background-color: #ffdede;
     color: #9e0000;
-    padding: 1rem;
+    padding: 0.3rem;
     display: flex;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
 `
