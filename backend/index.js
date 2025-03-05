@@ -15,7 +15,7 @@ connectDatabase()
 app.use(express.json())
 app.use(cors())
 app.use("/", userRoute)
-app.use("/auth", authRoute)
+app.use("/auth", authRoute) // 
 app.use("/news", newsRoute)
 
 app.listen(port, () => console.log(`Server running in http://localhost:${port}`))
