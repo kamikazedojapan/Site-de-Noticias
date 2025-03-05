@@ -6,6 +6,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signinSchema } from "../../schemas/signinSchema";
 import { signupSchema } from "../../schemas/signupSchema";
 import { ErrorSpan } from "../../components/Navbar/NavbarStyled";
+import { signup } from "../../services/userServices";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 export function Authentication() {
   const {
@@ -23,8 +26,17 @@ export function Authentication() {
   function inHandleSubmit(data) {
     console.log(data);
   }
-  function upHandleSubmit(data) {
-    console.log(data);
+
+  const navigate = useNavigate();
+
+  async function upHandleSubmit(data) {
+    try {
+      const response = await signup(data);
+      Cookies.set("token", response.data.user.id, { expires: 1 });
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

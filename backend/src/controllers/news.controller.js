@@ -24,7 +24,7 @@ export const create = async (req, res) => {
 
 export const findAll = async (req, res) => {
     try {
-        let {limit = 4, offset = 0} = req.query;
+        let {limit = 5, offset = 0} = req.query;
         
         limit = parseInt(limit);
         offset = parseInt(offset);
