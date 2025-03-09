@@ -1,37 +1,38 @@
-import { useEffect, useState, useCallback } from "react";
-import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { searchPosts } from "../../services/postsServices";
 import { ContainerResults, SearchPosts, TextResults } from "./SearchStyled";
-import { Card } from "../../components/Cards/Card";
+import { Card } from "../../components/Card/Card";
 
 export function Search() {
   const { title } = useParams();
   const [posts, setPosts] = useState([]);
 
-  const search = useCallback(async () => {
+  async function search() {
     try {
-      const postsAPI = await searchPosts(title);
-      setPosts(postsAPI.data.results);
-    } catch (error) {
-      console.log(error);
+      const postsApi = await searchPosts(title);
+      setPosts(postsApi.data.foundPosts);
+    } catch (err) {
+      console.log(err);
       setPosts([]);
     }
-  }, [title]); // search só muda quando title mudar
+  }
 
   useEffect(() => {
     search();
-  }, [search]); // Agora podemos adicionar search como dependência
+  }, [title]);
 
   return (
     <ContainerResults>
       <TextResults>
         <span>
-          {posts.length !== 0
-            ? `Encontramos ${posts.length} ${posts.length > 1 ? "resultados" : "resultado"
-            } para:`
+          {posts.length
+            ? `Encontramos ${posts.length} ${
+                posts.length > 1 ? "resultados" : "resultado"
+              } para:`
             : "Não encontramos resultados para:"}
         </span>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
       </TextResults>
 
       <SearchPosts>

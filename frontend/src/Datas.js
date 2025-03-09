@@ -1,30 +1,122 @@
-export const news = [ 
-    {
-        title : "Notícia 1",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s",
-        likes: 2,
-        comments: 1
-    },
-    {
-        title : "Notícia 2",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s",
-        likes: 3,
-        comments: 3
-    }, 
-    {
-        title : "Notícia 3",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s",
-        likes: 4,
-        comments: 5
-    },
-    {
-        title : "Notícia 4",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s",
-        likes: 1,
-        comments: 0
-    },
-]
+export const news = [
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 2",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 3",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 4",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+  {
+    title: "Noticia 1",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of",
+    image:
+      "https://www.aberje.com.br/wp-content/uploads/2016/03/lorem-ipsum.jpg",
+    likes: 2,
+    comments: 4,
+  },
+];

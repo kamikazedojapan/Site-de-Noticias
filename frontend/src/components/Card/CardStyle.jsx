@@ -11,24 +11,21 @@ export const CardContainer = styled.section`
   border-radius: 0.3rem;
   background-color: #fff;
 `;
-
 export const CardBody = styled.article`
   display: flex;
   width: 100%;
   height: 100%;
 
   div {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    width: 100%;
   }
 
   img {
-    flex: 0.5;
-    width: 50%;
-    height: 100%;
+    width: 40%;
     object-fit: cover;
     object-position: center;
     border-radius: 0 0.3rem 0.3rem 0;
@@ -39,24 +36,36 @@ export const CardHeader = styled.article`
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-size: ${(props) => (props.top ? "1.3rem" : "1.2rem")};
 
   h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 1rem;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: ${(props) => (props.top ? "2rem" : "1.3rem")};
+    font-size: ${(props) => (props.top ? "2.2rem" : "1.5rem")};
     width: 100%;
   }
 
-  p {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
   }
-  
+
+  i {
+    cursor: pointer;
+    color: #0bade3;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+  }
+
 `;
 
 export const CardFooter = styled.article`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 
   section {
     display: flex;

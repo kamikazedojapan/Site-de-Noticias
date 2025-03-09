@@ -1,18 +1,17 @@
 import axios from "axios";
+import Cookies from "js-cookie";
 
-const baseURL = "http://localhost:3000";
+const baseURL = "http://localhost:3001";
 
 export function signup(data) {
   delete data.confirmPassword;
   const body = {
     ...data,
     username: generateUserName(data.name),
-    avatar:
-      "https://st3.depositphotos.com/15648834/17930/v/450/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",
-    background:
-      "https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg",
+    avatar: "https://i.imgur.com/xmI2QAo.jpg",
+    background: "https://i.imgur.com/XbRg9D7.png",
   };
-  const response = axios.post(`${baseURL}/create`, body);
+  const response = axios.post(`${baseURL}/user/create`, body);
   return response;
 }
 
@@ -21,8 +20,17 @@ export function signin(data) {
   return response;
 }
 
+export function userLogged() {
+  const response = axios.get(`${baseURL}/user/findById`, {
+    headers: {
+      Authorization: `Bearer ${Cookies.get("token")}`,
+    }
+  });
+  return response;
+}
+
 function generateUserName(name) {
-    const nameLowerCasewithoutSpaces = name.replace(/\s/g, "").toLowerCase();
-    const randomNumber = Math.floor(Math.random() * 1000);
-    return `${nameLowerCasewithoutSpaces}${randomNumber}`;
+  const nameLowerCaseWithoutSpaces = name.replace(/\s/g, "").toLowerCase();
+  const randomNumber = Math.floor(Math.random() * 1000);
+  return `${nameLowerCaseWithoutSpaces}-${randomNumber}`;
 }
