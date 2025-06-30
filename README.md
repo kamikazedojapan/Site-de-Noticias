@@ -1,4 +1,4 @@
-# Website de notícias
+# 🌐Website de notícias
 
 Este projeto é um website de notícias dinâmico. O site permite que usuários leiam, publiquem e comentem notícias em diversas categorias. Ele inclui um painel de administração para gerenciar postagens e usuários, além de um sistema de autenticação seguro.
 
