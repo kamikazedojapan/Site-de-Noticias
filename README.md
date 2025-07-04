@@ -1,4 +1,4 @@
-# ⚛️MERN
+# 📰Site de Noticias
 
 Aplicativo full‑stack construído com o stack **MERN** (MongoDB, Express.js, React, Node.js).
 
